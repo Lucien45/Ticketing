@@ -8,11 +8,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test_backend": "bash _test_backend.sh"
+    "test_backend": "bash _test_backend.sh",
+    "create_user": "bash _create_user.sh"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
     "axios": "^1.19.0",
+    "jwt-decode": "^4.0.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.18.2"
