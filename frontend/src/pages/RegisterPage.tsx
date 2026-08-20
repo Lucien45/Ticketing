@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserService } from '../services/user.service';
 
@@ -11,7 +10,7 @@ const RegisterPage = () => {
         name: '', email: '', password: '', confirmPwd: ''
     });
     const [error, setError] = useState<boolean>(false);
-    const [userCreationSuccess, setUserCreationSuccess] = useState<boolean>(false);
+    const [, setUserCreationSuccess] = useState<boolean>(false);
     const [emailError, setEmailError] = useState<boolean>(false);
     const [loading, setLoading] = useState(false);
 
