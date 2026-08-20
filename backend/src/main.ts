@@ -4,6 +4,7 @@ import * as express from 'express';
 import { join } from 'path';
 import { Request, Response, NextFunction } from 'express';
 import { ValidationPipe } from '@nestjs/common';
+import { log } from 'console';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -23,8 +24,11 @@ async function bootstrap() {
   // Static pour /media
   app.use('/media', express.static(join(__dirname, '..', 'media')));
 
+  const allowedOrigins = process.env.CORS_ORIGIN?.split(',') || '*';
+  log('allowed origins: ', allowedOrigins);
+
   app.enableCors({
-    origin: '*',
+    origin: allowedOrigins,
     methods: 'GET,HEAD,POST,PATCH,PUT,DELETE',
     credentials: true,
   });
