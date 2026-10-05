@@ -21,7 +21,7 @@ const AppRoute = ({ setLoading }: RouteProps) => {
         setLoading(true);
         const handleComplete = () => setLoading(false);
         const timeout = setTimeout(handleComplete, 500);
-    
+        console.log(timeout);
         return () => clearTimeout(timeout);
     }, [location, setLoading]);
 

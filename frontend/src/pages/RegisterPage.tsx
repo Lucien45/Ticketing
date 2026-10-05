@@ -52,8 +52,7 @@ const RegisterPage = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await UserService.registerUser(UserRegister);
-            console.log("reponse server register: ", response);
+            await UserService.registerUser(UserRegister);
             setUserRegister({
                 name: '', email: '', password: '', confirmPwd: '' 
             })

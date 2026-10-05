@@ -93,7 +93,6 @@ export function TicketDetailPage() {
     setError(null);
     try {
       const updated = await TicketSevice.updateTicket(id, { [field]: value });
-      console.log('assignee. ',updated);
       
       setTicket(updated);
     } catch (err) {

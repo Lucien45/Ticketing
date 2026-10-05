@@ -14,7 +14,6 @@ export function DashboardPage() {
   const getTickets = async() => {
     try {
        const response = await TicketSevice.fetchTickets();
-       console.log('liste ticket: ', response);
         setTickets(response);
     } catch (error) {
         console.warn(error);
